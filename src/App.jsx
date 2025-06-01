@@ -1,6 +1,7 @@
 
 import './App.css'
 import About from './pages/About'
+import Chefs from './pages/Chefs'
 import FoodMenu from './pages/FoodMenu'
 import Reservation from './pages/Reservation'
 import Services from './pages/Services'
@@ -15,6 +16,7 @@ function App() {
       <Services/>
       <FoodMenu/>
       <Reservation/>
+      <Chefs/>
     </>
   )
 }
