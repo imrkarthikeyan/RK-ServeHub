@@ -63,7 +63,7 @@ export default function About(){
         <div className="min-h-screen flex flex-col items-center justify-center lg:flex-row" ref={sectionRef}>
             <div className="max-w-xl md:mx-16 w-full">
                 <div className='grid grid-cols-2 relative gap-3 pl-2 md:ml-12 my-30'>
-                    <div className='w-3/4 translate-x-[33.5%] translate-y-[26%]'>
+                    <div className='w-3/4 translate-x-[33.5%] translate-y-[28%]'>
                         <img src={a3} alt="" className='h-35 w-full' />
                     </div>
                     <div className='w-full'>
@@ -72,7 +72,7 @@ export default function About(){
                     <div className='w-full'>
                         <img src={a2} alt="" className='h-auto w-full'/>
                     </div>
-                    <div className='w-3/4 '>
+                    <div className='w-3/4'>
                         <img src={a4} alt="" className='h-auto w-full'/>
                     </div>
                 </div>
