@@ -29,11 +29,11 @@ function App() {
     <div>
 
       <section ref={homeRef}>
-        <Home onNext={()=>scrollTo(aboutRef)}/>
+        <Home onNext={()=>scrollTo(aboutRef)} onReservation={()=>scrollTo(reservationRef)}/>
       </section>
 
       <section ref={aboutRef}>
-        <About onNext={()=>scrollTo(servicesRef)} />
+        <About onNext={()=>scrollTo(servicesRef)} onReservation={()=>scrollTo(reservationRef)} />
       </section>
 
       <section ref={servicesRef}>

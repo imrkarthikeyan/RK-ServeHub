@@ -4,7 +4,7 @@ import a2 from '../img/res2.jpg';
 import a3 from '../img/masal vada.jpeg.jpg';
 import a4 from '../img/burger.jpg';
 
-export default function About(){
+export default function About({onReservation}){
 
     const [experienceYears, setExperienceYears] = useState(0);
     const [experienceChefs, setExperienceChefs] = useState(0);
@@ -112,7 +112,7 @@ export default function About(){
                     </div>
                 </div>
                 <div className="pt-7">
-                    <p className="inline-block py-4 px-8 bg-[DodgerBlue] text-white rounded-lg  transition duration-300 cursor-pointer">BOOK A TABLE</p>
+                    <p onClick={onReservation} className="inline-block py-4 px-8 bg-[DodgerBlue] text-white rounded-lg  transition duration-300 cursor-pointer">BOOK A TABLE</p>
                 </div>
             </div>
         </div>
