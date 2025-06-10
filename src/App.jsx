@@ -9,6 +9,7 @@ import Footer from './pages/Footer';
 import { useRef } from 'react'
 import './App.css'
 import Arrow from './pages/Arrow';
+import Navbar from './pages/Navbar';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div>
+      <Navbar onReservation={()=>scrollTo(reservationRef)} onAbout={()=>scrollTo(aboutRef)} onHome={()=>scrollTo(homeRef)} onServices={()=>scrollTo(servicesRef)} onFoodMenu={()=>scrollTo(foodmenuRef)} onChefs={()=>scrollTo(chefsRef)} onFooter={()=>scrollTo(footerRef)} onReviews={()=>scrollTo(reviewsRef)}/>
 
       <section ref={homeRef}>
         <Home onNext={()=>scrollTo(aboutRef)} onReservation={()=>scrollTo(reservationRef)}/>
