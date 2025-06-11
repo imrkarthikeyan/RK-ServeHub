@@ -6,13 +6,16 @@ import Chefs from './pages/Chefs';
 import Reservation from './pages/Reservation';
 import Reviews from './pages/Reviews';
 import Footer from './pages/Footer';
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import Arrow from './pages/Arrow';
 import Navbar from './pages/Navbar';
 
 
 function App() {
+
+  const[currentSection,setCurrentSection]=useState('');
+
   const homeRef=useRef(null)
   const aboutRef=useRef(null)
   const servicesRef=useRef(null)
@@ -22,13 +25,55 @@ function App() {
   const reviewsRef=useRef(null)
   const footerRef=useRef(null)
 
-  const scrollTo = (ref) => {
+  const sectionRefs=[
+    {ref:homeRef, id:'home'},
+    {ref:aboutRef, id:'about'},
+    {ref:servicesRef,id:'services'},
+    {ref:foodmenuRef,id:'menu'},
+    {ref:reservationRef,id:'reservation'},
+    {ref:chefsRef,id:'chefs'},
+    {ref:reviewsRef,id:'reviews'},
+    {ref:footerRef,id:'footer'}
+  ];
+
+
+  const scrollTo = (ref,id) => {
+    setCurrentSection(id);
+
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  useEffect(()=>{
+    const observer=new IntersectionObserver((entries)=>{
+      const visibleEntry=entries.find(entry=>entry.isIntersecting);
+      if(visibleEntry){
+        const id=visibleEntry.target.getAttribute('data-id');
+        setCurrentSection(id);
+      }
+    },
+    {threshold:0.6}
+  );
+    sectionRefs.forEach(({ref,id})=>{if(ref.current){
+      ref.current.setAttribute('data-id',id);
+      observer.observe(ref.current);
+    }
+    });
+    return()=>observer.disconnect();
+  },[]);
+
   return (
     <div>
-      <Navbar onReservation={()=>scrollTo(reservationRef)} onAbout={()=>scrollTo(aboutRef)} onHome={()=>scrollTo(homeRef)} onServices={()=>scrollTo(servicesRef)} onFoodMenu={()=>scrollTo(foodmenuRef)} onChefs={()=>scrollTo(chefsRef)} onFooter={()=>scrollTo(footerRef)} onReviews={()=>scrollTo(reviewsRef)}/>
+      <Navbar 
+        current={currentSection}
+        onReservation={()=>scrollTo(reservationRef,'reservation')} 
+        onAbout={()=>scrollTo(aboutRef,'about')} 
+        onHome={()=>scrollTo(homeRef,'home')} 
+        onServices={()=>scrollTo(servicesRef,'services')} 
+        onFoodMenu={()=>scrollTo(foodmenuRef,'menu')} 
+        onChefs={()=>scrollTo(chefsRef,'chefs')} 
+        onFooter={()=>scrollTo(footerRef,'footer')} 
+        onReviews={()=>scrollTo(reviewsRef,'reviews')}
+      />
 
       <section ref={homeRef}>
         <Home onNext={()=>scrollTo(aboutRef)} onReservation={()=>scrollTo(reservationRef)}/>

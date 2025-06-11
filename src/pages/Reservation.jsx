@@ -1,8 +1,5 @@
 import { useState } from 'react';
-import r1 from '../img/reserve1.jpg';
-import r3 from '../img/reserve3.jpg';
 import r2 from '../img/reserve2.jpg';
-import r4 from '../img/reserve4.jpg';
 import axios from 'axios'
 
 export default function Reservation(){
