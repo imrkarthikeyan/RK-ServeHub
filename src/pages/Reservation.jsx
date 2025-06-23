@@ -13,7 +13,7 @@ export default function Reservation(){
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            await axios.post('https://5013-157-51-82-219.ngrok-free.app', customer);
+            await axios.post('https://rk-servehub-backend-2.onrender.com/api/users', customer);
             alert("user saved");
         }
         catch(error){
