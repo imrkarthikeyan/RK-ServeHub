@@ -15,6 +15,7 @@ export default function Reservation(){
         try{
             await axios.post('https://rk-servehub-backend-2.onrender.com/api/users', customer);
             alert("Booked Successfully! Your table is waiting.");
+
         }
         catch(error){
             alert("Some thing went wrong while booking table")
