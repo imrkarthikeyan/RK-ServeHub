@@ -68,7 +68,7 @@ export default function Reservation(){
                                     </div>
                                 </div>
                                 <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8'>
-                                    <button type='submit' className='py-4 w-full bg-[DodgerBlue] text-white rounded'>Book Now</button>
+                                    <button type='submit' className='py-4 w-full bg-[DodgerBlue] text-white rounded cursor:pointer'>Book Now</button>
                                 </div>
                             </div>
                         </form>
