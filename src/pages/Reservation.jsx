@@ -14,10 +14,10 @@ export default function Reservation(){
         e.preventDefault();
         try{
             await axios.post('https://rk-servehub-backend-2.onrender.com/api/users', customer);
-            alert("user saved");
+            alert("Booked Successfully! Your table is waiting.");
         }
         catch(error){
-            alert("Error saving user")
+            alert("Some thing went wrong while booking table")
         }
     }
 
