@@ -1,4 +1,4 @@
-import { FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaEmber, FaInstagram, FaMailBulk, FaMailchimp, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer(){
     return(
@@ -13,6 +13,9 @@ export default function Footer(){
                             <o1 className="flex gap-4">
                                 <li><p><FaInstagram/></p></li>
                                 <li><p><FaTwitter/></p></li>
+                                <li><p><FaWhatsapp/></p></li>
+                                <li><p><FaMailBulk/></p></li>
+                                <li><p></p></li>
                             </o1>
                         </li>
                     </ul>

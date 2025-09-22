@@ -41,12 +41,12 @@ export default function FoodMenu(){
                 ))
                 }
             </div>
-            <hr className='w-100% text-[#dddd]'/>
-            <div className='container p-2 md:p-[70px]'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5'>
+            <hr className='w-full text-[#dddd]'/>
+            <div className='max-w-screen-lg mx-auto md:p-[30px]'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-30 gap-y-5'>
                         <div className='flex flex-col gap-5'>
                             {leftItems.map((food,index)=>(
-                                <div key={index} className="flex items-center">
+                                <div key={index} className="flex items-center w-full">
                                 <img src={food.image} alt={food.name} className="img-fluid flex-shrink-0 rounded w-[90px] h-[80px]"/>
                                 <div className='flex w-full flex-col text-left ps-4'>
                                     <h5 className='flex justify-between border-b pb-2 border-[#ccc]'>

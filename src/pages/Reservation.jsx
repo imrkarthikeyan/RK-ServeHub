@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import r2 from '../img/reserve2.jpg';
+import r2 from '../img/reserve2.png';
 import axios from 'axios'
 
 export default function Reservation(){
