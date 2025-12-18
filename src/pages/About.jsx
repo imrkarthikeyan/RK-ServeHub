@@ -66,7 +66,7 @@ export default function About({onReservation}){
             <div className="max-w-xl w-full">
                 <div className='pr-2 grid grid-cols-2 relative lg:gap-3 gap-3 pl-2 md:ml-12 my-30'>
                     <div className='w-3/4 translate-x-[33.5%] translate-y-[28%]'>
-                        <img src={a3} alt="" className='h-20 lg:h-35 md:h-34 w-full rounded-md object-cover' />
+                        <img src={a3} alt="" className='h-24 lg:h-35 md:h-34 w-full rounded-md object-cover' />
                     </div>
                     <div className='w-full'>
                         <img src={a1} alt="" className='h-auto w-full rounded-md'/>
