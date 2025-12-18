@@ -22,21 +22,21 @@ export default function FoodMenu(){
     const rightItems=foodItems.slice(midIndex)
 
      return(
-        <div className="py-[30px] text-center">
+        <div className="py-[30px] text-center p-5">
             <div className='text-center'>
                 <h1 className="text-2xl text-[DodgerBlue] mb-5 relative inline-block font-[500]">
-                    <span className='mr-1 absolute top-1/2 left-[-60px] block w-[45px] h-[2px] bg-[DodgerBlue] ml-2'></span>
+                    <span className=' absolute top-1/2 left-[-60px] w-[45px] h-[2px] bg-[DodgerBlue]'></span>
                     Food Menu
-                    <span className='absolute top-1/2 right-[-55px] block w-[45px] h-[2px] bg-[DodgerBlue] ml-2'></span>
+                    <span className='absolute top-1/2 right-[-55px] w-[45px] h-[2px] bg-[DodgerBlue]'></span>
                 </h1>
-                <h1 className='text-4xl font-[500]'>Popular Items</h1>
+                <h1 className='lg:text-4xl md:text-3xl text-2xl font-[500]'>Popular Items</h1>
             </div>
-            <div className='flex justify-center gap-15 md:pl-0 py-[30px] cursor-pointer'>
+            <div className='flex flex-wrap justify-center gap-6 md:gap-15 py-[30px] cursor-pointer overflow-x-hidden'>
                 {meals.map((meal)=>(
                     <div key={meal.name} onClick={()=>handleMealClick(meal.name)} className={`flex items-center px-4 ${selectedMeal === meal.name ? 'underline underline-offset-15 decoration-[DodgerBlue] font-semibold ' : ''}
 }`}>
-                    <span className='text-[DodgerBlue] text-4xl pr-2 py-[5px]'>{meal.icon}</span>
-                    <p className='text-xl py-[8px]' >{meal.name.charAt(0).toUpperCase()+meal.name.slice(1)}</p>
+                    <span className='text-[DodgerBlue] md:text-4xl text-3xl pr-2 py-[5px]'>{meal.icon}</span>
+                    <p className='md:text-xl text-lg py-[8px]' >{meal.name.charAt(0).toUpperCase()+meal.name.slice(1)}</p>
                     </div>
                 ))
                 }

@@ -27,7 +27,7 @@ export default function Chefs(){
                     {chefs.map((chef)=>(
                         <li key={chef.id} className="self-start flex flex-col mx-4 pt-4 items-center rounded-lg shadow-2xl shadow-gray-400 group overflow-hidden transition-all duration-500 ease-in-out w-full">
                             <div className="px-3">
-                                <img src={chef.img} alt={chef.name} className="rounded-full inline-block mb-6 transform duration-500 ease-in-out group-hover:scale-110 md:w-[220px] md:h-[220px]" />
+                                <img src={chef.img} alt={chef.name} className="rounded-full inline-block mb-6 w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] md:w-[220px] md:h-[220px] object-cover transform duration-500 ease-in-out group-hover:scale-110" />
                             </div>
                             <div className="relative mb-6">
                                 <h2 className="font-bold text-2xl p-2">{chef.name}</h2>

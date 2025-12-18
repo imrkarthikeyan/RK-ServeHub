@@ -12,13 +12,15 @@ export default function About({onReservation}){
     const sectionRef = useRef(null);
 
     useEffect(() => {
+        const isLargeScreen=window.innerWidth>=1024;
+        const thresholdValue=isLargeScreen ? 0.75 : 0.4;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if(entry.isIntersecting) {
                     setIsInView(true);
                 }
             },
-            { threshold: 0.75 }
+            { threshold: thresholdValue }
         );
 
         if (sectionRef.current) {
@@ -61,23 +63,23 @@ export default function About({onReservation}){
 
     return(
         <div className="min-h-screen flex flex-col items-center justify-center lg:flex-row" ref={sectionRef}>
-            <div className="max-w-xl md:mx-16 w-full">
-                <div className='grid grid-cols-2 relative gap-3 pl-2 md:ml-12 my-30'>
+            <div className="max-w-xl w-full">
+                <div className='pr-2 grid grid-cols-2 relative lg:gap-3 gap-3 pl-2 md:ml-12 my-30'>
                     <div className='w-3/4 translate-x-[33.5%] translate-y-[28%]'>
-                        <img src={a3} alt="" className='h-35 w-full' />
+                        <img src={a3} alt="" className='h-20 lg:h-35 md:h-34 w-full rounded-md object-cover' />
                     </div>
                     <div className='w-full'>
-                        <img src={a1} alt="" className='h-auto w-full'/>
+                        <img src={a1} alt="" className='h-auto w-full rounded-md'/>
                     </div>
                     <div className='w-full'>
-                        <img src={a2} alt="" className='h-auto w-full'/>
+                        <img src={a2} alt="" className='h-auto w-full rounded-md'/>
                     </div>
                     <div className='w-3/4'>
-                        <img src={a4} alt="" className='h-auto w-full'/>
+                        <img src={a4} alt="" className='h-auto w-full rounded-md'/>
                     </div>
                 </div>
             </div>
-            <div className='mt-8 ml-4 lg:ml-12 lg:mt-[150px]'>
+            <div className='ml-4 lg:ml-12 lg:mt-[150px] mb-5'>
                 <div className='flex items-center space-x-6 mb-4 text-[DodgerBlue] font-[700]'>
                     <h3 className='text-3xl'>About us</h3>
                 </div>

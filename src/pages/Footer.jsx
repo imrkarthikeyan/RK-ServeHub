@@ -10,13 +10,13 @@ export default function Footer(){
                         <li className="py-2"><p className="hover:curser-pointer"><span className="text-[Yellow]">Mobile no : </span>+91 9843790359</p></li>
                         <li className="py-2"><p><span className="text-[Yellow]">Email : </span>rkservehubteam@gmail.com</p></li>
                         <li className="py-2">
-                            <o1 className="flex gap-4">
+                            <ol className="flex gap-4">
                                 <li><p><FaInstagram/></p></li>
                                 <li><p><FaTwitter/></p></li>
                                 <li><p><FaWhatsapp/></p></li>
                                 <li><p><FaMailBulk/></p></li>
                                 <li><p></p></li>
-                            </o1>
+                            </ol>
                         </li>
                     </ul>
                 </div>
@@ -26,7 +26,7 @@ export default function Footer(){
                         <li className="py-2 text-[Yellow] text-xl"><h3>Monday - Saturday :</h3></li>
                         <li className="py-2"><p>24 / 7 hrs</p></li>
                         <li className="py-2 text-xl text-[Yellow]"><h3>Sunday :</h3></li>
-                        <li className="py-2"><p>9:00 am to 1:30 am</p></li>
+                        <li className="py-2"><p>9:00 am to 11:00 pm</p></li>
                     </ul>
                 </div>
                 <div>
